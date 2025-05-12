@@ -3,15 +3,13 @@ import sys
 
 def factorial(n):
     """
-    1. What it does:
-       Uses recursion to calculate the factorial of a number.
-       Basically, it multiplies the number by everything below it (n * n-1 * n-2...).
+    Calculates the factorial of a non-negative integer.
 
-    2. Parameter:
-       n (int): A number greater than or equal to 0. This is the number we're finding the factorial of.
+    Parameters:
+        n (int): A non-negative integer
 
-    3. Returns:
-       int: The result of multiplying n by every number below it down to 1.
+    Returns:
+        int: The factorial of n
     """
     if n == 0:
         return 1
