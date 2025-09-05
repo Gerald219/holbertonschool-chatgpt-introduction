@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en"> # to say the language is english
+
+<head>
+
+<meta charset="UTF-8"> # Use the full alphabet, emojis and all
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> # Tells the page to size itself to the screen
+
+<title>Change Background Color</title> # title / identifier of the page
+
+<style> /* how things look - fonts, spacing, button size */
+
+body {
+  font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px; /* Makes the button bigger inside */
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <h2>Click the button to change the background color</h2> # instructions for users
+    <button id="colorButton">Change Color</button> # button to click
+    <script>
+  document.getElementById('colorButton').addEventListener('click', function () {
+    changeBackgroundColor();
+  });
+
+  function changeBackgroundColor() {
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#33FFF5']; // list of colors
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    const randomColor = colors[randomIndex];
+    document.body.style.backgroundColor = randomColor;
+  }
+</script>        
+</body>
+</html>
